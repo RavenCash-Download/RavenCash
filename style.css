@@ -1,0 +1,255 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a1a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  padding: 1rem 5%;
+  background-color: rgba(10, 10, 26, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #8a2be2;
+}
+
+.hero {
+  padding: 120px 5% 60px;
+  background: url('https://ravencash.net/assets/img/bg/hero3-bg.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(138, 43, 226, 0.2), transparent);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #8a2be2, #4a90e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.raven-image {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.3));
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+  }
+}
+
+.masternode {
+  padding: 60px 5%;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masternode-content {
+  flex: 1;
+}
+
+.masternode h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #8a2be2;
+}
+
+.explore-btn {
+  background: linear-gradient(45deg, #8a2be2, #4a90e2);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: transform 0.3s;
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+}
+
+.roadmap {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #8a2be2;
+  z-index: -1;
+}
+
+.timeline-item {
+  background: #1a1a3a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.features {
+  padding: 60px 5%;
+  background: #0d0d23;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-item {
+  background: rgba(138, 43, 226, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background: #0d0d23;
+  padding: 60px 5% 30px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: #8a2be2;
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.copyright {
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #1a1a3a;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .masternode {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .raven-image {
+    display: none;
+  }
+}
